@@ -71,8 +71,14 @@ function MyTabBar({state, descriptors, navigation, position}) {
             testID={options.tabBarTestID}
             onPress={onPress}
             onLongPress={onLongPress}
-            style={{flex: 1, paddingBottom: '5%', justifyContent: 'center', alignItems: 'center'}}>
-            <Animated.Text style={{opacity}}>{label}</Animated.Text>
+            style={{
+              flex: 1,
+              paddingBottom: '5%',
+              justifyContent: 'center',
+              alignItems: 'center',
+              backgroundColor: 'purple'
+            }}>
+            <Animated.Text style={{opacity, color: 'white'}}>{label}</Animated.Text>
           </TouchableOpacity>
         );
       })}
