@@ -1,13 +1,14 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import {NavigationContainer} from '@react-navigation/native';
 
-
+import NavigationRoutes from './src/NavigationRoute';
 
 const App = () => {
   return (
-     <NavigationContainer>
-     </NavigationContainer>
+    <NavigationContainer>
+      <NavigationRoutes />
+    </NavigationContainer>
   );
 };
 
