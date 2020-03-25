@@ -1,6 +1,4 @@
 import React from 'react';
-import {View, Button, Text} from 'react-native';
-import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import Weight from '../Screens/weight';
