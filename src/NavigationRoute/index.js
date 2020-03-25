@@ -3,7 +3,7 @@ import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs
 import {View, TouchableOpacity} from 'react-native';
 import Animated from 'react-native-reanimated';
 
-import Weight from '../Screens/weight';
+import StackWeight from './stackNavigationWeight';
 import Length from '../Screens/Length';
 import Volume from '../Screens/Volume';
 import Area from '../Screens/Area.js';
@@ -14,7 +14,7 @@ const Tab = createMaterialTopTabNavigator();
 function NavigationRoutes() {
   return (
     <Tab.Navigator tabBar={props => <MyTabBar {...props} />}>
-      <Tab.Screen name="Weight" component={Weight} />
+      <Tab.Screen name="Weight" component={StackWeight} />
       <Tab.Screen name="Length" component={Length} />
       <Tab.Screen name="Volume" component={Volume} />
       <Tab.Screen name="Area" component={Area} />
