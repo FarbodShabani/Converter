@@ -1,13 +1,17 @@
 import React, {useState} from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+
 
 const Weight = () => {
-  var Choosing = useState(-1);
-  var choose = Choosing[0];
-  var setChoose = Choosing[1];
+  var FromChoosing = useState(-1);
+  var fromChoose = FromChoosing[0];
+  var setFromChoose = FromChoosing[1];
+  const navigation = useNavigation();
+
   return (
     <View style={{flex: 1, backgroundColor: 'red'}}>
-      <TouchableOpacity style={{flex: 1}}>
+      <TouchableOpacity style={{flex: 1}} onPress={()=>navigation.navigate('UnitDic') }>
         <View
           style={{
             flex: 0.2,
@@ -25,7 +29,21 @@ const Weight = () => {
               justifyContent: 'center',
               alignItems: 'center',
             }}>
-            <Text>{choose === -1 ? 'From' : 'from :'}</Text>
+            {fromChoose === -1 ? (
+              <Text
+                allowFontScaling={false}
+                style={{color: 'white', fontSize: 30 , textAlign: 'center'}}>
+                {' '}
+                From{' '}
+              </Text>
+            ) : (
+              <Text
+                allowFontScaling={false}
+                style={{color: 'white', fontSize: 25, textAlign: 'center'}}>
+                {' '}
+                From :{' '}
+              </Text>
+            )}
           </View>
         </View>
       </TouchableOpacity>
