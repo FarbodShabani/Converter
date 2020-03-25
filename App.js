@@ -18,7 +18,7 @@ const App = () => {
           headerBackTitleVisible: false,
           headerTitleStyle: {color: 'white'},
           headerBackground: () => (
-            <View style={{backgroundColor: '#226774', flex: 1}} />
+            <View style={{backgroundColor: '#2c3e50', flex: 1}} />
           ),
         }}>
         <Stack.Screen name="Converter" component={NavigationRoutes} />

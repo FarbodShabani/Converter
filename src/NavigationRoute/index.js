@@ -76,7 +76,7 @@ function MyTabBar({state, descriptors, navigation, position}) {
               paddingBottom: '5%',
               justifyContent: 'center',
               alignItems: 'center',
-              backgroundColor: '#30789D'
+              backgroundColor: '#F1C40F'
             }}>
             <Animated.Text style={{opacity, color: 'white'}}>{label}</Animated.Text>
           </TouchableOpacity>
