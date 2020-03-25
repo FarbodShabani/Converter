@@ -5,8 +5,8 @@ import Animated from 'react-native-reanimated';
 
 import StackWeight from './stackNavigationWeight';
 import StackLength from './stackNavigationLength';
-import Volume from '../Screens/Volume';
-import Area from '../Screens/Area.js';
+import StackVolume from './stackNavigationVolume';
+import StackArea from './stackNavigationArea';
 import Bmi from '../Screens/Bmi';
 
 const Tab = createMaterialTopTabNavigator();
@@ -16,8 +16,8 @@ function NavigationRoutes() {
     <Tab.Navigator tabBar={props => <MyTabBar {...props} />}>
       <Tab.Screen name="Weight" component={StackWeight} />
       <Tab.Screen name="Length" component={StackLength} />
-      <Tab.Screen name="Volume" component={Volume} />
-      <Tab.Screen name="Area" component={Area} />
+      <Tab.Screen name="Volume" component={StackVolume} />
+      <Tab.Screen name="Area" component={StackArea} />
       <Tab.Screen name="Bmi" component={Bmi} />
     </Tab.Navigator>
   );
