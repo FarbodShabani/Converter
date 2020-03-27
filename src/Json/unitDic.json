@@ -1,0 +1,64 @@
+{
+    "Weight":[
+        {
+            "name": "gram",
+            "data": 1,
+            "subdata": 1,
+            "id": 0
+        },
+        {
+            "name": "milligramme",
+            "data": 1000,
+            "subdata":1,
+            "id": 1
+        },
+        {
+            "name": "kilogramme",
+            "data": 0.001,
+            "subdata":1,
+            "id": 1
+        },
+        {
+            "name": "Metric Ton",
+            "data": 0.000001,
+            "subdata":1,
+            "id": 1
+        },
+        {
+            "name": "Long Ton",
+            "data": 0.0000001,
+            "subdata": 9.84,
+            "id": 1
+        },
+        {
+            "name": "Short Ton",
+            "data": 0.000001,
+            "subdata":1.1,
+            "id": 1
+        },
+        {
+            "name": "Pound",
+            "data": 0.0021,
+            "subdata":1,
+            "id": 1
+        },
+        {
+            "name": "Ounce",
+            "data": 0.0352,
+            "subdata":1,
+            "id": 1
+        },
+        {
+            "name": "Carat",
+            "data": 5,
+            "subdata":1,
+            "id": 1
+        },
+        {
+            "name": "Atomic Mass Unit",
+            "data": 6.02,
+            "subdata":23,
+            "id": 0
+        }
+    ]
+}

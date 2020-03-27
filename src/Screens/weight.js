@@ -12,7 +12,7 @@ const Weight = () => {
     <View style={{flex: 1, backgroundColor: 'red'}}>
       <TouchableOpacity
         style={{flex: 1}}
-        onPress={() => navigation.navigate('UnitDic', {id: 11})}>
+        onPress={() => navigation.navigate('UnitDic', {name: 'Weight'})}>
         <View
           style={{
             flex: 0.2,
