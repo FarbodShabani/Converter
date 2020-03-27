@@ -1,21 +1,26 @@
 import React, {useState, useEffect} from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, ScrollView} from 'react-native';
 import {useRoute} from '@react-navigation/native';
-import DataUnit from '../Json/unitDic.json';
 
+import Units from '../Components/units';
 
 function UnitDic() {
   const route = useRoute();
-  var Unitkind =route.params.name;
-  var dataSource = useState([]);
-  var dataSourceArray = dataSource[0];
-  var setDataSource = dataSource[1];
-  useEffect(() => {
-    setDataSource(DataUnit.Unitkind)
-  });
+  var Unitkind = route.params.name;
   return (
-    <View>
-      <Text>{Unitkind}</Text>
+    <View style={{flex: 1}}>
+      <View
+        style={{flex: 0.15, justifyContent: 'center', alignItems: 'center'}}>
+        <Text
+          allowFontScaling={false}
+          style={{fontSize: 50, color: '#676463', textAlign: 'center'}}>
+          from
+        </Text>
+      </View>
+      <ScrollView
+        style={{flex: 1, flexDirection: 'column', backgroundColor: 'red'}}>
+        <Units kind={Unitkind} />
+      </ScrollView>
     </View>
   );
 }
