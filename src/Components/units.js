@@ -2,8 +2,6 @@ import React from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
-import unitDic from '../Json/unitDic.json';
-
 const Units = props => {
   const navigation = useNavigation();
   /* weight */
@@ -11,7 +9,7 @@ const Units = props => {
     if (props.type === 'From') {
     return(
       <View style={{flex: 1, backgroundColor: '#ECF0F1'}}>
-      <TouchableOpacity onPress={() => navigation.navigate(props.kind, {nameF: 'Gramme', dataF: 1, subDataF: 1, idF:0})}>
+      <TouchableOpacity onPress={() => navigation.navigate(props.kind, {nameF: 'Gramme', dataF: 1, subDataF: 1, idF:1})}>
       <View style={{justifyContent: "center", paddingBottom: '10%'}}>
       <Text allowFontScaling={false} style={{fontSize: 30, marginLeft: '5%', color: '#6E5160'}} >
         Gramme
@@ -86,7 +84,7 @@ const Units = props => {
     else if (props.type === 'To') {
       return(
       <View style={{flex: 1, backgroundColor: '#ECF0F1'}}>
-      <TouchableOpacity onPress={() => navigation.navigate(props.kind, {name: 'Gramme', data: 1, subData: 1, id:0})}>
+      <TouchableOpacity onPress={() => navigation.navigate(props.kind, {name: 'Gramme', data: 1, subData: 1, id:1})}>
       <View style={{justifyContent: "center", paddingBottom: '10%'}}>
       <Text allowFontScaling={false} style={{fontSize: 30, marginLeft: '5%', color: '#6E5160'}} >
         Gramme
