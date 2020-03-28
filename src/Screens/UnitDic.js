@@ -7,6 +7,7 @@ import Units from '../Components/units';
 function UnitDic() {
   const route = useRoute();
   var Unitkind = route.params.name;
+  var where = route.params.type;
   return (
     <View style={{flex: 1}}>
       <View
@@ -17,9 +18,10 @@ function UnitDic() {
           from
         </Text>
       </View>
+      <View style={{backgroundColor: '#676463', width: '100%', height: '0.00489%'}} />
       <ScrollView
-        style={{flex: 1, flexDirection: 'column', backgroundColor: 'red'}}>
-        <Units kind={Unitkind} />
+        style={{flex: 1, flexDirection: 'column', backgroundColor: '#ECF0F1'}}>
+        <Units kind={Unitkind} type={where} />
       </ScrollView>
     </View>
   );
