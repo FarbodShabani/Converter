@@ -1080,7 +1080,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 nameF: 'Foot',
-                dataF: 3.28,
+                dataF: 3.28084,
                 subDataF: 1,
                 idF: 1,
               })
@@ -1097,7 +1097,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 nameF: 'Inch',
-                dataF: 31.37,
+                dataF: 31.3701,
                 subDataF: 1,
                 idF: 1,
               })
@@ -1255,7 +1255,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 name: 'Foot',
-                data: 3.28,
+                data: 3.28084,
                 subData: 1,
                 id: 1,
               })
@@ -1272,7 +1272,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 name: 'Inch',
-                data: 31.37,
+                data: 31.3701,
                 subData: 1,
                 id: 1,
               })
