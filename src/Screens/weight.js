@@ -37,7 +37,7 @@ const Weight = () => {
   var setResult = Result[1];
 
   const navigation = useNavigation();
- 
+
   return (
     <View style={{flex: 1}}>
       <View
@@ -49,7 +49,9 @@ const Weight = () => {
         }}>
         <TouchableOpacity
           style={{flex: 1, width: '95%', marginRight: '-4%'}}
-          onPress={() => navigation.navigate('UnitDic', {name: 'Weight', type:'From'})}>
+          onPress={() =>
+            navigation.navigate('UnitDic', {name: 'Weight', type: 'From'})
+          }>
           <View
             style={{
               flex: 1,
@@ -59,7 +61,11 @@ const Weight = () => {
               justifyContent: 'center',
               alignItems: 'center',
             }}>
-            <TextFrom upDateIdFrom={setFromId} upDateFromData={setFromData} upDateFromSubData={setFromSubData} />
+            <TextFrom
+              upDateIdFrom={setFromId}
+              upDateFromData={setFromData}
+              upDateFromSubData={setFromSubData}
+            />
           </View>
         </TouchableOpacity>
       </View>
@@ -72,7 +78,9 @@ const Weight = () => {
         }}>
         <TouchableOpacity
           style={{flex: 1, width: '95%', marginRight: '-4%'}}
-          onPress={() => navigation.navigate('UnitDic', {name: 'Weight', type: 'To'})}>
+          onPress={() =>
+            navigation.navigate('UnitDic', {name: 'Weight', type: 'To'})
+          }>
           <View
             style={{
               flex: 1,
@@ -82,19 +90,22 @@ const Weight = () => {
               justifyContent: 'center',
               alignItems: 'center',
             }}>
-            <TextTo upDateIdTo={setToId} upDateToData={setToData} upDateToSubData={setToSubData} />
+            <TextTo
+              upDateIdTo={setToId}
+              upDateToData={setToData}
+              upDateToSubData={setToSubData}
+            />
           </View>
         </TouchableOpacity>
       </View>
-       <View
+      <View
         style={{
           flex: 0.2,
           marginTop: '10%',
           justifyContent: 'center',
           alignItems: 'center',
         }}>
-        <View
-          style={{flex: 1, width: '95%', marginRight: '-4%'}}>
+        <View style={{flex: 1, width: '95%', marginRight: '-4%'}}>
           <View
             style={{
               flex: 1,
@@ -134,8 +145,7 @@ const Weight = () => {
           justifyContent: 'center',
           alignItems: 'center',
         }}>
-        <View
-          style={{flex: 1, width: '95%', marginRight: '-4%'}}>
+        <View style={{flex: 1, width: '95%', marginRight: '-4%'}}>
           <View
             style={{
               flex: 1,
@@ -145,7 +155,16 @@ const Weight = () => {
               justifyContent: 'center',
               alignItems: 'center',
             }}>
-            <FindingResalt IdTo={toId} ToData={toData} ToSubData={toSubData} IdFrom={fromId} FromData={fromData} FromSubData={fromSubData} updateAnswer={() => setAnswer} finalAnswer={answerValue}/>
+            <FindingResalt
+              IdTo={toId}
+              ToData={toData}
+              ToSubData={toSubData}
+              IdFrom={fromId}
+              FromData={fromData}
+              FromSubData={fromSubData}
+              updateAnswer={() => setAnswer}
+              finalAnswer={answerValue}
+            />
           </View>
         </View>
       </View>
@@ -159,20 +178,24 @@ function TextFrom(props) {
     props.upDateIdFrom(route.params.idF);
     props.upDateFromData(route.params.dataF);
     props.upDateFromSubData(route.params.subDataF);
-    return <Text
-                allowFontScaling={false}
-                style={{color: 'white', fontSize: 25, textAlign: 'center'}}>
-                {' '}
-                From :{route.params.nameF}
-              </Text>
+    return (
+      <Text
+        allowFontScaling={false}
+        style={{color: 'white', fontSize: 25, textAlign: 'center'}}>
+        {' '}
+        From :{route.params.nameF}
+      </Text>
+    );
   } else {
-    return <Text
-                allowFontScaling={false}
-                style={{color: 'white', fontSize: 30, textAlign: 'center'}}>
-                {' '}
-                From{' '}
-              </Text>}
-  
+    return (
+      <Text
+        allowFontScaling={false}
+        style={{color: 'white', fontSize: 30, textAlign: 'center'}}>
+        {' '}
+        From{' '}
+      </Text>
+    );
+  }
 }
 
 function TextTo(props) {
@@ -181,49 +204,90 @@ function TextTo(props) {
     props.upDateIdTo(route.params.id);
     props.upDateToData(route.params.data);
     props.upDateToSubData(route.params.subData);
-    return <Text
-                allowFontScaling={false}
-                style={{color: 'white', fontSize: 25, textAlign: 'center'}}>
-                {' '}
-                To :{route.params.name}
-              </Text>
+    return (
+      <Text
+        allowFontScaling={false}
+        style={{color: 'white', fontSize: 25, textAlign: 'center'}}>
+        {' '}
+        To :{route.params.name}
+      </Text>
+    );
   } else {
-    return <Text
-                allowFontScaling={false}
-                style={{color: 'white', fontSize: 30, textAlign: 'center'}}>
-                {' '}
-                To{' '}
-              </Text>}
-  
+    return (
+      <Text
+        allowFontScaling={false}
+        style={{color: 'white', fontSize: 30, textAlign: 'center'}}>
+        {' '}
+        To{' '}
+      </Text>
+    );
+  }
 }
 function FindingResalt(props) {
   if (props.finalAnswer !== 0) {
     if (props.IdFrom === 1) {
-      if(props.IdTo === 1) {
-        return(
-          <Text allowFontScaling={false} numberOfLines={1} style={{fontSize: 25, color: 'white'}}> {props.finalAnswer * props.ToData * props.ToSubData / (props.FromData * props.FromSubData )}</Text>
-        )
-      }
-      else if (props.IdTo === 2 ) {
-        return(
-          <Text allowFontScaling={false} numberOfLines={1} style={{fontSize: 25, color: 'white'}}> {props.finalAnswer * props.ToData *(Math.pow(10 ,props.ToSubData)) / (props.FromData * props.FromSubData )}</Text>
-        )
+      if (props.IdTo === 1) {
+        return (
+          <Text
+            allowFontScaling={false}
+            numberOfLines={1}
+            style={{fontSize: 25, color: 'white'}}>
+            {' '}
+            {(props.finalAnswer * props.ToData * props.ToSubData) /
+              (props.FromData * props.FromSubData)}
+          </Text>
+        );
+      } else if (props.IdTo === 2) {
+        return (
+          <Text
+            allowFontScaling={false}
+            numberOfLines={1}
+            style={{fontSize: 25, color: 'white'}}>
+            {' '}
+            {(props.finalAnswer *
+              props.ToData *
+              Math.pow(10, props.ToSubData)) /
+              (props.FromData * props.FromSubData)}
+          </Text>
+        );
       }
     } else if (props.IdFrom === 2) {
-      if(props.IdTo === 1) {
-        return(
-          <Text allowFontScaling={false} numberOfLines={1} style={{fontSize: 25, color: 'white'}}> {props.finalAnswer * props.ToData * props.ToSubData / (props.FromData * (Math.pow(10 ,props.FromSubData)))}</Text>
-        )
-      }
-      else if (props.IdTo === 2 ) {
-        return(
-          <Text allowFontScaling={false} numberOfLines={1} style={{fontSize: 25, color: 'white'}}> {props.finalAnswer * props.ToData *(Math.pow(10 ,props.ToSubData)) / (props.FromData * (Math.pow(10 ,props.FromSubData)))} </Text>
-        )
+      if (props.IdTo === 1) {
+        return (
+          <Text
+            allowFontScaling={false}
+            numberOfLines={1}
+            style={{fontSize: 25, color: 'white'}}>
+            {' '}
+            {(props.finalAnswer * props.ToData * props.ToSubData) /
+              (props.FromData * Math.pow(10, props.FromSubData))}
+          </Text>
+        );
+      } else if (props.IdTo === 2) {
+        return (
+          <Text
+            allowFontScaling={false}
+            numberOfLines={1}
+            style={{fontSize: 25, color: 'white'}}>
+            {' '}
+            {(props.finalAnswer *
+              props.ToData *
+              Math.pow(10, props.ToSubData)) /
+              (props.FromData * Math.pow(10, props.FromSubData))}{' '}
+          </Text>
+        );
       }
     }
-  }
-  else return <Text allowFontScaling={false} numberOfLines={1} style={{fontSize: 25, color: 'white'}}> waiting for your input </Text>
-;
+  } else
+    return (
+      <Text
+        allowFontScaling={false}
+        numberOfLines={1}
+        style={{fontSize: 25, color: 'white'}}>
+        {' '}
+        waiting for your input{' '}
+      </Text>
+    );
 }
 
 export default Weight;
