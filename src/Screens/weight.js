@@ -93,7 +93,7 @@ const Weight = () => {
           justifyContent: 'center',
           alignItems: 'center',
         }}>
-        <TouchableOpacity
+        <View
           style={{flex: 1, width: '95%', marginRight: '-4%'}}>
           <View
             style={{
@@ -108,6 +108,7 @@ const Weight = () => {
               style={{width: '95%', color: '#30789D', fontSize: 25}}
               allowFontScaling={false}
               numberOfLines={1}
+              editable={fromId === -1 || toId === -1 ? false : true}
               keyboardType="decimal-pad"
               onFocus={() => {
                 if (inputValue === 'Input your number . . .') {
@@ -124,7 +125,7 @@ const Weight = () => {
               value={inputValue}
             />
           </View>
-        </TouchableOpacity>
+        </View>
       </View>
       <View
         style={{
@@ -133,20 +134,20 @@ const Weight = () => {
           justifyContent: 'center',
           alignItems: 'center',
         }}>
-        <TouchableOpacity
+        <View
           style={{flex: 1, width: '95%', marginRight: '-4%'}}>
           <View
             style={{
               flex: 1,
               width: '95%',
-              backgroundColor: '#CA3767',
+              backgroundColor: '#636E4D',
               borderRadius: 35,
               justifyContent: 'center',
               alignItems: 'center',
             }}>
             <FindingResalt IdTo={toId} ToData={toData} ToSubData={toSubData} IdFrom={fromId} FromData={fromData} FromSubData={fromSubData} updateAnswer={() => setAnswer} finalAnswer={answerValue}/>
           </View>
-        </TouchableOpacity>
+        </View>
       </View>
     </View>
   );
@@ -198,13 +199,31 @@ function TextTo(props) {
 function FindingResalt(props) {
   if (props.finalAnswer !== 0) {
     if (props.IdFrom === 1) {
-      props.updateAnswer(props.finalAnswer * props.FromData);
-      return (
-        <Text allowFontScaling={false} numberOfLines={1} style={{fontSize: 25}}> {props.finalAnswer * props.FromData}</Text>
-      )
+      if(props.IdTo === 1) {
+        return(
+          <Text allowFontScaling={false} numberOfLines={1} style={{fontSize: 25, color: 'white'}}> {props.finalAnswer * props.ToData * props.ToSubData / (props.FromData * props.FromSubData )}</Text>
+        )
+      }
+      else if (props.IdTo === 2 ) {
+        return(
+          <Text allowFontScaling={false} numberOfLines={1} style={{fontSize: 25, color: 'white'}}> {props.finalAnswer * props.ToData *(Math.pow(10 ,props.ToSubData)) / (props.FromData * props.FromSubData )}</Text>
+        )
+      }
+    } else if (props.IdFrom === 2) {
+      if(props.IdTo === 1) {
+        return(
+          <Text allowFontScaling={false} numberOfLines={1} style={{fontSize: 25, color: 'white'}}> {props.finalAnswer * props.ToData * props.ToSubData / (props.FromData * (Math.pow(10 ,props.FromSubData)))}</Text>
+        )
+      }
+      else if (props.IdTo === 2 ) {
+        return(
+          <Text allowFontScaling={false} numberOfLines={1} style={{fontSize: 25, color: 'white'}}> {props.finalAnswer * props.ToData *(Math.pow(10 ,props.ToSubData)) / (props.FromData * (Math.pow(10 ,props.FromSubData)))} </Text>
+        )
+      }
     }
   }
-  else return <Text/>;
+  else return <Text allowFontScaling={false} numberOfLines={1} style={{fontSize: 25, color: 'white'}}> waiting for your input </Text>
+;
 }
 
 export default Weight;
