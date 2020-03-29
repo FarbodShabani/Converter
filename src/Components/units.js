@@ -412,5 +412,159 @@ const Units = props => {
     }
   } 
   /* Volume ends here */
+  /* Length starts here */
+   if (props.kind === 'Length') {
+    if (props.type === 'From') {
+    return(
+      <View style={{flex: 1, backgroundColor: '#ECF0F1'}}>
+      <TouchableOpacity onPress={() => navigation.navigate(props.kind, {nameF: 'Metre', dataF: 1, subDataF: 1, idF:1})}>
+      <View style={{justifyContent: "center", paddingBottom: '10%'}}>
+      <Text allowFontScaling={false} style={{fontSize: 30, marginLeft: '5%', color: '#6E5160'}} >
+        Metre
+      </Text>
+      </View>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate(props.kind, {nameF: 'KiloMetre', dataF: 0.001, subDataF: 1, idF:1})}>
+      <View style={{justifyContent: "center", paddingBottom: '10%'}}>
+      <Text allowFontScaling={false} style={{fontSize: 30, marginLeft: '5%', color: '#6E5160'}} >
+        KiloMetre
+      </Text>
+      </View>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate(props.kind, {nameF: 'MilliMetre', dataF: 1000, subDataF: 1, idF:1})}>
+      <View style={{justifyContent: "center", paddingBottom: '10%'}}>
+      <Text allowFontScaling={false} style={{fontSize: 30, marginLeft: '5%', color: '#6E5160'}} >
+        MilliMetre
+      </Text>
+      </View>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate(props.kind, {nameF: 'Micro Metre', dataF: 100000, subDataF: 1, idF:1})}>
+      <View style={{justifyContent: "center", paddingBottom: '10%'}}>
+      <Text allowFontScaling={false} style={{fontSize: 30, marginLeft: '5%', color: '#6E5160'}} >
+        Micro Metre
+      </Text>
+      </View>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate(props.kind, {nameF: 'Nano Metre', dataF: 1, subDataF: 9, idF:2})}>
+      <View style={{justifyContent: "center", paddingBottom: '10%'}}>
+      <Text allowFontScaling={false} style={{fontSize: 30, marginLeft: '5%', color: '#6E5160'}} >
+        Nano Metre
+      </Text>
+      </View>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate(props.kind, {nameF: 'Mile', dataF: 6.2, subDataF: -4, idF:2})}>
+      <View style={{justifyContent: "center", paddingBottom: '10%'}}>
+      <Text allowFontScaling={false} style={{fontSize: 30, marginLeft: '5%', color: '#6E5160'}} >
+        Mile
+      </Text>
+      </View>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate(props.kind, {nameF: 'Yard', dataF: 1.9, subDataF: 1, idF:1})}>
+      <View style={{justifyContent: "center", paddingBottom: '10%'}}>
+      <Text allowFontScaling={false} style={{fontSize: 30, marginLeft: '5%', color: '#6E5160'}} >
+        Yard
+      </Text>
+      </View>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate(props.kind, {nameF: 'Foot', dataF: 3.28, subDataF: 1, idF:1})}>
+      <View style={{justifyContent: "center", paddingBottom: '10%'}}>
+      <Text allowFontScaling={false} style={{fontSize: 30, marginLeft: '5%', color: '#6E5160'}} >
+        Foot
+      </Text>
+      </View>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate(props.kind, {nameF: 'Inch', dataF: 31.37, subDataF: 1, idF:1})}>
+      <View style={{justifyContent: "center", paddingBottom: '10%'}}>
+      <Text allowFontScaling={false} style={{fontSize: 30, marginLeft: '5%', color: '#6E5160'}} >
+        Inch
+      </Text>
+      </View>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate(props.kind, {nameF: 'Light Year', dataF: 1.05, subDataF: -16, idF:2})}>
+      <View style={{justifyContent: "center", paddingBottom: '10%'}}>
+      <Text allowFontScaling={false} style={{fontSize: 30, marginLeft: '5%', color: '#6E5160'}} >
+        Light Year
+      </Text>
+      </View>
+      </TouchableOpacity>
+      </View>
+    );}
+    else if (props.type === 'To') {
+      return(
+      <View style={{flex: 1, backgroundColor: '#ECF0F1'}}>
+      <TouchableOpacity onPress={() => navigation.navigate(props.kind, {name: 'Metre', data: 1, subData: 1, id:1})}>
+      <View style={{justifyContent: "center", paddingBottom: '10%'}}>
+      <Text allowFontScaling={false} style={{fontSize: 30, marginLeft: '5%', color: '#6E5160'}} >
+        Metre
+      </Text>
+      </View>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate(props.kind, {name: 'KiloMetre', data: 0.001, subData: 1, id:1})}>
+      <View style={{justifyContent: "center", paddingBottom: '10%'}}>
+      <Text allowFontScaling={false} style={{fontSize: 30, marginLeft: '5%', color: '#6E5160'}} >
+        KiloMetre
+      </Text>
+      </View>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate(props.kind, {name: 'MilliMetre', data: 1000, subData: 1, id:1})}>
+      <View style={{justifyContent: "center", paddingBottom: '10%'}}>
+      <Text allowFontScaling={false} style={{fontSize: 30, marginLeft: '5%', color: '#6E5160'}} >
+        MilliMetre
+      </Text>
+      </View>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate(props.kind, {name: 'Micro Metre', data: 100000, subData: 1, id:1})}>
+      <View style={{justifyContent: "center", paddingBottom: '10%'}}>
+      <Text allowFontScaling={false} style={{fontSize: 30, marginLeft: '5%', color: '#6E5160'}} >
+        Micro Metre
+      </Text>
+      </View>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate(props.kind, {name: 'Nano Metre', data: 1, subData: 9, id:2})}>
+      <View style={{justifyContent: "center", paddingBottom: '10%'}}>
+      <Text allowFontScaling={false} style={{fontSize: 30, marginLeft: '5%', color: '#6E5160'}} >
+        Nano Metre
+      </Text>
+      </View>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate(props.kind, {name: 'Mile', data: 6.2, subData: -4, id:2})}>
+      <View style={{justifyContent: "center", paddingBottom: '10%'}}>
+      <Text allowFontScaling={false} style={{fontSize: 30, marginLeft: '5%', color: '#6E5160'}} >
+        Mile
+      </Text>
+      </View>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate(props.kind, {name: 'Yard', data: 1.9, subData: 1, id:1})}>
+      <View style={{justifyContent: "center", paddingBottom: '10%'}}>
+      <Text allowFontScaling={false} style={{fontSize: 30, marginLeft: '5%', color: '#6E5160'}} >
+        Yard
+      </Text>
+      </View>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate(props.kind, {name: 'Foot', data: 3.28, subData: 1, id:1})}>
+      <View style={{justifyContent: "center", paddingBottom: '10%'}}>
+      <Text allowFontScaling={false} style={{fontSize: 30, marginLeft: '5%', color: '#6E5160'}} >
+        Foot
+      </Text>
+      </View>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate(props.kind, {name: 'Inch', data: 31.37, subData: 1, id:1})}>
+      <View style={{justifyContent: "center", paddingBottom: '10%'}}>
+      <Text allowFontScaling={false} style={{fontSize: 30, marginLeft: '5%', color: '#6E5160'}} >
+        Inch
+      </Text>
+      </View>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate(props.kind, {name: 'Light Year', data: 1.05, subData: -16, id:2})}>
+      <View style={{justifyContent: "center", paddingBottom: '10%'}}>
+      <Text allowFontScaling={false} style={{fontSize: 30, marginLeft: '5%', color: '#6E5160'}} >
+        Light Year
+      </Text>
+      </View>
+      </TouchableOpacity>
+      </View>
+    );
+    }
+  } 
 };
 export default Units;
