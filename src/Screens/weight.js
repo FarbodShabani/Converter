@@ -24,7 +24,7 @@ const Weight = () => {
   var toSubData = ToSubData[0];
   var setToSubData = ToSubData[1];
 
-  var Input = useState('Input your number . . .');
+  var Input = useState('Weight');
   var inputValue = Input[0];
   var setInput = Input[1];
 
@@ -111,14 +111,14 @@ const Weight = () => {
               editable={fromId === -1 || toId === -1 ? false : true}
               keyboardType="decimal-pad"
               onFocus={() => {
-                if (inputValue === 'Input your number . . .') {
+                if (inputValue === 'Weight') {
                   setInput('');
                 }
               }}
               onChangeText={event => {
                 setInput(event);
                 setAnswer(0);
-                if (inputValue !== 'Input your number . . .') {
+                if (inputValue !== 'Weight') {
                   setAnswer(event);
                 }
               }}
