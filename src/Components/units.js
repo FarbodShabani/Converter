@@ -81,8 +81,8 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 nameF: 'Long Ton',
-                dataF: 0.00000001,
-                subDataF: 9.84,
+                dataF: 0.0000001,
+                subDataF: 9.8421,
                 idF: 1,
               })
             }>
@@ -98,8 +98,8 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 nameF: 'Short Ton',
-                dataF: 0.0000001,
-                subDataF: 1.1,
+                dataF: 0.000001,
+                subDataF: 1.1023,
                 idF: 1,
               })
             }>
@@ -115,7 +115,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 nameF: 'Pound',
-                dataF: 0.0021,
+                dataF: 0.00220462,
                 subDataF: 1,
                 idF: 1,
               })
@@ -132,7 +132,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 nameF: 'Ounce',
-                dataF: 0.0352,
+                dataF: 0.035274,
                 subDataF: 1,
                 idF: 1,
               })
@@ -256,8 +256,8 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 name: 'Long Ton',
-                data: 0.00000001,
-                subData: 9.84,
+                data: 0.0000001,
+                subData: 9.8421,
                 id: 1,
               })
             }>
@@ -273,8 +273,8 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 name: 'Short Ton',
-                data: 0.0000001,
-                subData: 1.1,
+                data: 0.000001,
+                subData: 1.1023,
                 id: 1,
               })
             }>
@@ -290,7 +290,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 name: 'Pound',
-                data: 0.0021,
+                data: 0.00220462,
                 subData: 1,
                 id: 1,
               })
@@ -307,7 +307,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 name: 'Ounce',
-                data: 0.0352,
+                data: 0.035274,
                 subData: 1,
                 id: 1,
               })
@@ -470,7 +470,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 nameF: 'US Gallon',
-                dataF: 264.17,
+                dataF: 264.172,
                 subDataF: 1,
                 idF: 1,
               })
@@ -487,7 +487,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 nameF: 'US Quart',
-                dataF: 1056.68,
+                dataF: 1056.69,
                 subDataF: 1,
                 idF: 1,
               })
@@ -504,7 +504,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 nameF: 'US Pint',
-                dataF: 2113.37,
+                dataF: 2113.38,
                 subDataF: 1,
                 idF: 1,
               })
@@ -521,7 +521,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 nameF: 'US Cup',
-                dataF: 4226.75,
+                dataF: 4166.67,
                 subDataF: 1,
                 idF: 1,
               })
@@ -538,7 +538,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 nameF: 'US Fluid Ouance',
-                dataF: 33814.03,
+                dataF: 33814,
                 subDataF: 1,
                 idF: 1,
               })
@@ -555,7 +555,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 nameF: 'US Table Spoon',
-                dataF: 56312.12,
+                dataF: 67628,
                 subDataF: 1,
                 idF: 1,
               })
@@ -572,7 +572,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 nameF: 'US Tea Spoon',
-                dataF: 168936.38,
+                dataF: 202884,
                 subDataF: 1,
                 idF: 1,
               })
@@ -589,7 +589,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 nameF: 'Cubic Mile',
-                dataF: 2.39,
+                dataF: 2.3991,
                 subDataF: -10,
                 idF: 2,
               })
@@ -605,8 +605,8 @@ const Units = props => {
           <TouchableOpacity
             onPress={() =>
               navigation.navigate(props.kind, {
-                nameF: 'Cubic yard',
-                dataF: 1.3,
+                nameF: 'Cubic Yard',
+                dataF: 1.30795,
                 subDataF: 1,
                 idF: 1,
               })
@@ -623,7 +623,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 nameF: 'Cubic Foot',
-                dataF: 35.31,
+                dataF: 35.3147,
                 subDataF: 1,
                 idF: 1,
               })
@@ -640,7 +640,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 nameF: 'Cubic Inch',
-                dataF: 610223.74,
+                dataF: 610223.7,
                 subDataF: 1,
                 idF: 1,
               })
@@ -764,7 +764,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 name: 'US Gallon',
-                data: 264.17,
+                data: 264.172,
                 subData: 1,
                 id: 1,
               })
@@ -781,7 +781,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 name: 'US Quart',
-                data: 1056.68,
+                data: 1056.69,
                 subDataF: 1,
                 id: 1,
               })
@@ -798,7 +798,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 name: 'US Pint',
-                data: 2113.37,
+                data: 2113.38,
                 subData: 1,
                 id: 1,
               })
@@ -815,7 +815,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 name: 'US Cup',
-                data: 4226.75,
+                data: 4166.67,
                 subData: 1,
                 id: 1,
               })
@@ -832,7 +832,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 name: 'US Fluid Ouance',
-                data: 33814.03,
+                data: 33814,
                 subData: 1,
                 id: 1,
               })
@@ -849,7 +849,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 name: 'US Table Spoon',
-                data: 56312.12,
+                data: 67628,
                 subData: 1,
                 id: 1,
               })
@@ -866,7 +866,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 name: 'US Tea Spoon',
-                data: 168936.38,
+                data: 202884,
                 subData: 1,
                 id: 1,
               })
@@ -883,7 +883,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 name: 'Cubic Mile',
-                data: 2.39,
+                data: 2.3991,
                 subData: -10,
                 id: 2,
               })
@@ -899,8 +899,8 @@ const Units = props => {
           <TouchableOpacity
             onPress={() =>
               navigation.navigate(props.kind, {
-                name: 'Cubic yard',
-                data: 1.3,
+                name: 'Cubic Yard',
+                data: 1.30795,
                 subData: 1,
                 id: 1,
               })
@@ -917,7 +917,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 name: 'Cubic Foot',
-                data: 35.31,
+                data: 35.3147,
                 subData: 1,
                 id: 1,
               })
@@ -934,7 +934,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 name: 'Cubic Inch',
-                data: 610223.74,
+                data: 610223.7,
                 subData: 1,
                 id: 1,
               })
@@ -1046,7 +1046,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 nameF: 'Mile',
-                dataF: 6.2,
+                dataF: 6.21371,
                 subDataF: -4,
                 idF: 2,
               })
@@ -1063,7 +1063,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 nameF: 'Yard',
-                dataF: 1.9,
+                dataF: 1.09361296,
                 subDataF: 1,
                 idF: 1,
               })
@@ -1097,7 +1097,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 nameF: 'Inch',
-                dataF: 31.3701,
+                dataF: 39.3701,
                 subDataF: 1,
                 idF: 1,
               })
@@ -1221,7 +1221,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 name: 'Mile',
-                data: 6.2,
+                data: 6.21371,
                 subData: -4,
                 id: 2,
               })
@@ -1238,7 +1238,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 name: 'Yard',
-                data: 1.9,
+                data: 1.09361296,
                 subData: 1,
                 id: 1,
               })
@@ -1272,7 +1272,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 name: 'Inch',
-                data: 31.3701,
+                data: 39.3701,
                 subData: 1,
                 id: 1,
               })
@@ -1418,7 +1418,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 nameF: 'Square Yard',
-                dataF: 1.19,
+                dataF: 1.19599,
                 subDataF: 1,
                 idF: 1,
               })
@@ -1435,7 +1435,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 nameF: 'Square Foot',
-                dataF: 10.76,
+                dataF: 10.7639,
                 subDataF: 1,
                 idF: 1,
               })
@@ -1469,7 +1469,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 nameF: 'Acre',
-                dataF: 2.47,
+                dataF: 2.47105,
                 subDataF: -4,
                 idF: 2,
               })
@@ -1593,7 +1593,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 name: 'Square Yard',
-                data: 1.19,
+                data: 1.19599,
                 subData: 1,
                 id: 1,
               })
@@ -1610,7 +1610,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 name: 'Square Foot',
-                date: 10.76,
+                date: 10.7639,
                 subDate: 1,
                 i: 1,
               })
@@ -1644,7 +1644,7 @@ const Units = props => {
             onPress={() =>
               navigation.navigate(props.kind, {
                 name: 'Acre',
-                date: 2.47,
+                date: 2.47105,
                 subDat: -4,
                 id: 2,
               })
